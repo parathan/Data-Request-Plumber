@@ -1,10 +1,17 @@
 {
-  "name": "datareqplumber",
+  "name": "drplumber",
   "version": "1.0.0",
-  "description": "Data Request Plumber application",
+  "description": "data request plumber",
   "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.15"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,13 +21,10 @@
   "keywords": [
     "plumber"
   ],
-  "author": "Parathan",
+  "author": "parathan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/parathan/Data-Request-Plumber/issues"
   },
-  "homepage": "https://github.com/parathan/Data-Request-Plumber#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/parathan/Data-Request-Plumber#readme"
 }
