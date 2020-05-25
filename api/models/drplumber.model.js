@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
 var requestSchema = new mongoose.Schema({
+  name : {
+    type : String,
+    required : true
+  },
   sender : {
     type : String,
     required : true
@@ -31,3 +35,5 @@ var userSchema = new mongoose.Schema({
   outgoing : [requestSchema],
   incoming : [requestSchema]
 });
+
+mongoose.model('Plumber', plumberSchema);
