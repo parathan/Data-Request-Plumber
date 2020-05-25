@@ -17,9 +17,11 @@ var requestSchema = new mongoose.Schema({
     type : Date,
     default : Date.now
   },
-  deadline : {
-    type : Date,
-    required : true
+  priority : {
+    type : Number,
+    min : 0,
+    max : 5,
+    default : 5
   },
   specifications : {
     type : String,
