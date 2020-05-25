@@ -14,6 +14,9 @@ app.use(function(req, res, next){
   next();
 });
 
+// Set static directory before defining routes
+app.use(express.static(path.join(__dirname, 'public')));
+
 //Enable Parsing
 app.use(bodyParser.urlencoded({ extended: false}));
 
