@@ -38,4 +38,4 @@ var userSchema = new mongoose.Schema({
   incoming : [requestSchema]
 });
 
-mongoose.model('Plumber', plumberSchema);
+mongoose.model('Plumber', userSchema);

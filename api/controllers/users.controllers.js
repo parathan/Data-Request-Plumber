@@ -103,7 +103,6 @@ module.exports.usersAddOne = function(req, res) {
   User
     .create({
       name : req.body.name,
-      }
     }, function(err, user) {
       if (err) {
         console.log("Error creating user");

@@ -178,11 +178,11 @@ module.exports.requestsUpdateOne = function(req, res) {
           .status(response.status)
           .json(response.message);
       } else {
-        thisRequest.name : req.body.name;
-        thisRequest.sender : req.body.sender;
-        thisRequest.receiver : req.body.receiver;
-        thisRequest.priority : parseInt(req.body.priority, 10);
-        thisRequest.specifications : req.body.specifications;
+        thisRequest.name = req.body.name;
+        thisRequest.sender = req.body.sender;
+        thisRequest.receiver = req.body.receiver;
+        thisRequest.priority = parseInt(req.body.priority, 10);
+        thisRequest.specifications = req.body.specifications;
         User.save(function(err, UserUpdated) {
           if (err) {
             res

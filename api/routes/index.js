@@ -4,29 +4,29 @@ var router = express.Router();
 var ctrlUsers = require('../controllers/users.controllers.js');
 var ctrlRequests = require('../controllers/requests.controllers.js');
 
-// Hotel routes
+// user routes
 router
   .route('/users')
-  .get(ctrlHotels.hotelsGetAll)
-  .post(ctrlHotels.hotelsAddOne);
+  .get(ctrlUsers.usersGetAll)
+  .post(ctrlUsers.usersAddOne);
 
 router
   .route('/users/:userId')
-  .get(ctrlHotels.hotelsGetOne)
-  .put(ctrlHotels.hotelsUpdateOne)
-  .delete(ctrlHotels.hotelsDeleteOne);
+  .get(ctrlUsers.usersGetOne)
+  .put(ctrlUsers.usersUpdateOne)
+  .delete(ctrlUsers.usersDeleteOne);
 
 
-// Review routes
+// request routes
 router
   .route('/users/:userId/requests')
-  .get(ctrlReviews.reviewsGetAll)
-  .post(ctrlReviews.reviewsAddOne);
+  .get(ctrlRequests.requestsGetAll)
+  .post(ctrlRequests.requestsAddOne);
 
 router
   .route('/users/:userId/requests/:requestId')
-  .get(ctrlReviews.reviewsGetOne)
-  .put(ctrlReviews.reviewsUpdateOne)
-  .delete(ctrlReviews.reviewsDeleteOne);
+  .get(ctrlRequests.requestsGetOne)
+  .put(ctrlRequests.requestsUpdateOne)
+  .delete(ctrlRequests.requestsDeleteOne);
 
 module.exports = router;
