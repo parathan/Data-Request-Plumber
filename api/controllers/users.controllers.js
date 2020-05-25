@@ -166,7 +166,7 @@ module.exports.usersUpdateOne = function(req, res) {
 };
 
 
-module.exports.UsersDeleteOne = function(req, res) {
+module.exports.usersDeleteOne = function(req, res) {
   var userId = req.params.userId;
 
   User
