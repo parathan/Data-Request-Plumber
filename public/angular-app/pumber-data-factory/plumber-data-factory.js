@@ -11,7 +11,7 @@ function plumberDataFactory($http) {
     return $http.get('/api/users').then(complete).catch(failed);
   }
 
-  function userDisplay() {
+  function userDisplay(id) {
     return $http.get('/api/users/' + id).then(complete).catch(failed);
   }
 
